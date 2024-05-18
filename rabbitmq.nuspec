@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>rabbitmq</id>
+    <title>RabbitMQ</title>
+    <version>3.13.2</version>
+    <authors>VMware, Inc.</authors>
+    <owners>Team RabbitMQ</owners>
+    <summary>RabbitMQ</summary>
+    <description>
+RabbitMQ, a multi-protocol open source messaging and streaming broker.
+
+The RabbitMQ Chocolatey package source has a new home at https://github.com/rabbitmq/chocolatey-package
+Contributions via pull requests are welcome.
+
+If you are looking for community help with RabbitMQ, see https://www.rabbitmq.com/contact.html#community-resources.
+
+#### Package Parameters
+
+ * `/NOMANAGEMENT` - set this to not enable RabbitMQ management plugin'
+ * `/RABBITMQBASE` - specify an optional RABBITMQ_BASE. Note the parameter has no underscore, but the environment variable does. ex:/RABBITMQBASE:C:\ProgramData\RabbitMQ. The default is %AppData\RabbitMQ'
+    </description>
+    <projectUrl>https://www.rabbitmq.com/</projectUrl>
+    <projectSourceUrl>https://github.com/rabbitmq/rabbitmq-server</projectSourceUrl>
+    <packageSourceUrl>https://github.com/rabbitmq/chocolatey-package</packageSourceUrl>
+    <releaseNotes>https://github.com/rabbitmq/rabbitmq-server/releases/tag/v3.13.2</releaseNotes>
+    <tags>messaging rabbitmq amqp mqtt stomp queueing streaming microservices admin</tags>
+    <copyright>VMware, Inc.</copyright>
+    <licenseUrl>https://www.rabbitmq.com/mpl.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://raw.githubusercontent.com/rabbitmq/chocolatey-package/3.13.x/rabbitmq-logo.png</iconUrl>
+    <dependencies>
+      <!-- https://learn.microsoft.com/en-us/nuget/concepts/package-versioning#version-ranges -->
+      <dependency id="erlang" version="[26.0,27.0)" />
+    </dependencies>
+  </metadata>
+  <files>
+      <file src="tools\*" target="tools" exclude=".*" />
+  </files>
+</package>
